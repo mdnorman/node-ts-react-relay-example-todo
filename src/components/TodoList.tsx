@@ -2,9 +2,10 @@ import * as React from 'react';
 import { createFragmentContainer, graphql } from 'react-relay';
 
 import { Todo } from './Todo';
+import { Todo as TodoModel } from '../models/Todo';
 
 interface TodoListProps {
-  user: { todos: { edges: { node: { id: string; text: string; complete: boolean } }[] } };
+  user: { todos: { edges: { node: TodoModel }[] } };
 }
 
 class TodoListComponent extends React.Component<TodoListProps> {

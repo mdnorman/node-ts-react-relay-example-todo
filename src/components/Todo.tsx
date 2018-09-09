@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { createFragmentContainer, graphql } from 'react-relay';
+import { Todo as TodoModel } from '../models/Todo';
 
 interface TodoProps {
-  todo: {
-    id: string;
-    text: string;
-    complete: boolean;
-  };
+  todo: TodoModel;
 }
 
 export class TodoComponent extends React.Component<TodoProps> {
