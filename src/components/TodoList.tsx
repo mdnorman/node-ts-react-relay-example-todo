@@ -3,9 +3,10 @@ import { createFragmentContainer, graphql } from 'react-relay';
 
 import { Todo } from './Todo';
 import { Todo as TodoModel } from '../models/Todo';
+import { GraphQLCollection } from '../models/GraphQLCollection';
 
 interface TodoListProps {
-  user: { todos: { edges: { node: TodoModel }[] } };
+  user: { todos: GraphQLCollection<TodoModel> };
 }
 
 class TodoListComponent extends React.Component<TodoListProps> {
