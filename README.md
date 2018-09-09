@@ -1,4 +1,4 @@
-# CHANGEME
+# React Relay TODO Example
 
 ## Setup
 
@@ -23,6 +23,8 @@ Many popular IDEs and editors support this out of the box or with a plugin.
 ### GraphQL Server
 
 This project assumes that there is a separate GraphQL server running for the backend.
+
+This example is using the [Relay Examples] project.
 
 The server configuration assumes that the GraphQL server is running on [http://localhost:3000/graphql].
 
