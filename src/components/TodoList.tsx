@@ -17,7 +17,7 @@ class TodoListComponent extends React.Component<TodoListProps> {
       return <div>Todo list empty. Check Check!!</div>;
     }
 
-    return <div>Todo: {this.props.user.todos.edges.map(({ node }) => <Todo key={`a:${node.id}`} todo={node} />)}</div>;
+    return <div>Todo: {this.props.user.todos.edges.map(({ node }) => <Todo key={node.id} todo={node} />)}</div>;
   }
 }
 
