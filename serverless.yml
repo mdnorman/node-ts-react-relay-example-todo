@@ -36,7 +36,7 @@ custom:
     bucket: CHANGEME
     path: websites/${self:service.name}/${self:custom.stage}/cloudfront
   graphql:
-    path: /graphql
+    path: /
     domainName: ${self:custom.graphql.domainNameStage.${self:custom.stage}}
     domainNameStage:
       test: test-api.${self:custom.graphql.baseDomainName}
@@ -73,6 +73,7 @@ resources:
                 HTTPSPort: 443
                 OriginProtocolPolicy: https-only
           Enabled: 'true'
+          HttpVersion: http2
           Aliases:
             - ${self:custom.domainName}
           DefaultRootObject: index.html
@@ -87,13 +88,8 @@ resources:
               ResponsePagePath: /index.html
           DefaultCacheBehavior:
             AllowedMethods:
-              - DELETE
               - GET
               - HEAD
-              - OPTIONS
-              - PATCH
-              - POST
-              - PUT
             ## The origin id defined above
             TargetOriginId: WebApp
             ## Defining if and how the QueryString and Cookies are forwarded to the origin which in this case is S3
@@ -104,7 +100,7 @@ resources:
             ## The protocol that users can use to access the files in the origin. To allow HTTP use `allow-all`
             ViewerProtocolPolicy: redirect-to-https
           CacheBehaviors:
-            - PathPattern: /graphql
+            - PathPattern: graphql
               AllowedMethods:
               - DELETE
               - GET
@@ -118,8 +114,6 @@ resources:
               ## Defining if and how the QueryString and Cookies are forwarded to the origin which in this case is S3
               ForwardedValues:
                 QueryString: true
-                Headers:
-                  - '*'
                 Cookies:
                   Forward: all
               ## The protocol that users can use to access the files in the origin. To allow HTTP use `allow-all`
