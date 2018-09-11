@@ -1,4 +1,4 @@
-service: CHANGEME
+service: node-ts-react-relay-example-todo
 
 plugins:
   - serverless-finch
@@ -31,18 +31,18 @@ custom:
   domainNameStage:
     test: test.${self:custom.baseDomainName}
     prod: www.${self:custom.baseDomainName}
-  baseDomainName: ${self:custom.hostedZone}
-  hostedZone: CHANGEME.com
+  baseDomainName: relay-todo.${self:custom.hostedZone}
+  hostedZone: codesaplings.com
   logs:
-    bucket: CHANGEME
+    bucket: codesaplings-logs
     path: websites/${self:service.name}/${self:custom.stage}/cloudfront
   graphql:
-    path: ''
+    path: /todo
     domainName: ${self:custom.graphql.domainNameStage.${self:custom.stage}}
     domainNameStage:
       test: test-api.${self:custom.graphql.baseDomainName}
       prod: api.${self:custom.graphql.baseDomainName}
-    baseDomainName: ${self:custom.baseDomainName}
+    baseDomainName: codesaplings.com
 
 
 resources:
