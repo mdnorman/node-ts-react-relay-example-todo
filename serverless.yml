@@ -36,7 +36,7 @@ custom:
     bucket: CHANGEME
     path: websites/${self:service.name}/${self:custom.stage}/cloudfront
   graphql:
-    path: /
+    path: ''
     domainName: ${self:custom.graphql.domainNameStage.${self:custom.stage}}
     domainNameStage:
       test: test-api.${self:custom.graphql.baseDomainName}
