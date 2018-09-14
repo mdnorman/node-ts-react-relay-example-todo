@@ -136,4 +136,3 @@ type User implements Node {
   totalCount: Int
   completedCount: Int
 }
-
