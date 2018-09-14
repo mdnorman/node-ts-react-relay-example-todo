@@ -2,6 +2,7 @@ import * as React from 'react';
 import { graphql, QueryRenderer } from 'react-relay';
 import { environment } from '../relay-utils/environment';
 import { TodoList } from '../components/TodoList';
+import { MainQueryResponse } from './__generated__/MainQuery.graphql';
 
 const MainQuery = graphql`
   query MainQuery {
@@ -12,9 +13,7 @@ const MainQuery = graphql`
   }
 `;
 
-export interface MainProps {
-  viewer: { id: string };
-}
+export interface MainProps {}
 
 export class Main extends React.Component<MainProps> {
   render() {
@@ -23,7 +22,7 @@ export class Main extends React.Component<MainProps> {
         environment={environment}
         query={MainQuery}
         variables={{}}
-        render={({ error, props }) => {
+        render={({ error, props }: { error: Error; props: MainQueryResponse }) => {
           if (error) {
             return <div style={{ color: 'red' }}>ERROR: {error.message}</div>;
           }

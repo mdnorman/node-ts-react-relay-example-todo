@@ -108,7 +108,7 @@ type Todo implements Node {
   # The ID of an object
   id: ID!
   text: String
-  complete: Boolean
+  complete: Boolean!
 }
 
 # A connection to a list of items.
@@ -117,13 +117,13 @@ type TodoConnection {
   pageInfo: PageInfo!
 
   # A list of edges.
-  edges: [TodoEdge]
+  edges: [TodoEdge!]!
 }
 
 # An edge in a connection.
 type TodoEdge {
   # The item at the end of the edge
-  node: Todo
+  node: Todo!
 
   # A cursor for use in pagination
   cursor: String!
@@ -132,7 +132,7 @@ type TodoEdge {
 type User implements Node {
   # The ID of an object
   id: ID!
-  todos(status: String = "any", after: String, first: Int, before: String, last: Int): TodoConnection
-  totalCount: Int
-  completedCount: Int
+  todos(status: String = "any", after: String, first: Int, before: String, last: Int): TodoConnection!
+  totalCount: Int!
+  completedCount: Int!
 }
