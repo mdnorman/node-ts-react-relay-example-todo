@@ -27,8 +27,8 @@
     "lint": "tslint -c tslint.json --project tsconfig.json && tslint -c tslint.json --project spec/tsconfig.json",
     "pretty": "pretty-quick --stage",
     "server:development": "node dev-server.js",
-    "deploy": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod",
-    "deploy:test": "serverless deploy -v --stage test && serverless client deploy -v --no-confirm --no-delete-contents --stage test",
+    "deploy": "serverless deploy -v --stage test && serverless client deploy -v --no-confirm --no-delete-contents --stage test",
+    "deploy:prod": "serverless deploy -v --stage prod && serverless client deploy -v --no-confirm --no-delete-contents --stage prod",
     "fetch-schema": "get-graphql-schema ${GRAPHQL_URL:-http://localhost:${GRAPHQL_PORT:-3000}/graphql} > ./schema.graphql",
     "relay": "relay-compiler --src ./src --schema ./schema.graphql --extensions js jsx ts tsx --language typescript",
     "relay:watch": "npm run relay -- --watch"
