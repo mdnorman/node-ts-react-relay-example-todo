@@ -22,7 +22,7 @@ const webpackConfig = (env, argv) => {
   }
 
   return {
-    entry: ['babel-polyfill', './src/index.tsx'],
+    entry: ['@babel/polyfill', './src/index.tsx'],
     output: {
       filename,
       path: path.resolve(__dirname, './dist'),
