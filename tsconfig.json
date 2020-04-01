@@ -17,6 +17,6 @@
     "outDir": "dist"
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-  "files": ["./node_modules/@types/jasmine/index.d.ts", "./node_modules/@types/node/index.d.ts"],
+  "files": ["./node_modules/@types/node/index.d.ts"],
   "exclude": ["dist", "node_modules", "examples", "spec"]
 }

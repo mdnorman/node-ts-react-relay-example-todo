@@ -4,7 +4,7 @@
 
 ### Node
 
-1.  Install `nvm` ([Node Version Manager])
+1.  Install `nvm` ([Node Version Manager](https://github.com/creationix/nvm))
 2.  `cd` to the project directory and execute the following:
     ```
     nvm install
@@ -14,7 +14,7 @@
 
 ### IDE Setup
 
-This project uses [EditorConfig] for IDE configuration.
+This project uses [EditorConfig](https://editorconfig.org/) for IDE configuration.
 
 See `.editorconfig` for settings.
 
@@ -26,7 +26,8 @@ This project assumes that there is a separate GraphQL server running for the bac
 
 This example is using the [Relay Examples] project.
 
-The server configuration assumes that the GraphQL server is running on [http://localhost:3000/graphql].
+The server configuration assumes that the GraphQL server is running on
+[http://localhost:3000/graphql](http://localhost:3000/graphql).
 
 The GraphQL server port can be changed by setting the environment variable `GRAPHQL_PORT` to an open port.
 
@@ -83,13 +84,13 @@ npm run relay:watch
 npm run server:development
 ```
 
-The server runs at [http://localhost:5000/].
+The server runs at [http://localhost:5000/](http://localhost:5000/).
 
 The port can be changed by setting the environment variable `WEBPACK_SERVER_PORT` to an open port.
 
 ### Prettier
 
-This project uses [Prettier], so please run it before checking in:
+This project uses [Prettier](https://prettier.io/), so please run it before checking in:
 
 ```
 npm run pretty
@@ -101,7 +102,7 @@ Some IDEs and editors have plugins for running Prettier.
 
 ### Linting
 
-This project uses [TSLint]. Check linting before checking in:
+This project uses [TSLint](https://palantir.github.io/tslint/). Check linting before checking in:
 
 ```
 npm run lint
@@ -113,7 +114,7 @@ Many IDEs and editors support TSLint.
 
 ## Testing
 
-This project uses [Jasmine] for testing. Run tests before checking in.
+This project uses [Jest](https://jestjs.io/) for testing. Run tests before checking in.
 
 ### Unit Tests
 
@@ -164,11 +165,3 @@ npm run deploy
 ### Troubleshooting
 
 If there are errors when deploying, check the Cloudformation logs for the stack.
-
-[http://localhost:3000/graphql]: http://localhost:3000/graphql
-[http://localhost:5000/]: http://localhost:5000/
-[editorconfig]: https://editorconfig.org/
-[jasmine]: https://jasmine.github.io/
-[node version manager]: https://github.com/creationix/nvm
-[prettier]: https://prettier.io/
-[tslint]: https://palantir.github.io/tslint/
