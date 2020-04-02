@@ -6,6 +6,8 @@ const WEBPACK_SERVER_PORT = process.env.WEBPACK_SERVER_PORT || 5000;
 const GRAPHQL_PORT = process.env.GRAPHQL_PORT || 3000;
 const GRAPHQL_URL = process.env.GRAPHQL_URL || `http://localhost:${GRAPHQL_PORT}`;
 
+console.log(`/graphql proxy to ${GRAPHQL_URL}`);
+
 const config = require('./webpack.config')({}, {});
 const options = {
   contentBase: './dist',
