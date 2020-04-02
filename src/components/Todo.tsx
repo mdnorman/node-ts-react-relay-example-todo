@@ -35,13 +35,12 @@ export class TodoComponent extends React.Component<TodoProps> {
   }
 }
 
-export const Todo = createFragmentContainer(
-  TodoComponent,
-  graphql`
+export const Todo = createFragmentContainer(TodoComponent, {
+  todo: graphql`
     fragment Todo_todo on Todo {
       id
       text
       complete
     }
   `,
-);
+});

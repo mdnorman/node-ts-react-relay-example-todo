@@ -12,17 +12,21 @@ class TodoListComponent extends React.Component<TodoListProps> {
   render() {
     console.log('TodoList props:', this.props);
 
-    if (this.props.user.todos.edges.length === 0) {
+    if (this.props.user.todos.edges?.length === 0) {
       return <div>Todo list empty. Check Check!!</div>;
     }
 
-    return <div>Todo: {this.props.user.todos.edges.map(({ node }) => <Todo key={node.id} todo={node} />)}</div>;
+    return (
+      <div>
+        Todo:{' '}
+        {this.props.user.todos.edges?.map(fragment => fragment && <Todo key={fragment.node.id} todo={fragment.node} />)}
+      </div>
+    );
   }
 }
 
-export const TodoList = createFragmentContainer(
-  TodoListComponent,
-  graphql`
+export const TodoList = createFragmentContainer(TodoListComponent, {
+  user: graphql`
     fragment TodoList_user on User {
       todos {
         edges {
@@ -34,4 +38,4 @@ export const TodoList = createFragmentContainer(
       }
     }
   `,
-);
+});

@@ -15,6 +15,12 @@ const MainQuery = graphql`
 
 export interface MainProps {}
 
+type MainCreated = {
+  error: Error | null;
+  props: MainQueryResponse | null;
+  retry: (() => void) | null;
+};
+
 export class Main extends React.Component<MainProps> {
   render() {
     return (
@@ -22,9 +28,14 @@ export class Main extends React.Component<MainProps> {
         environment={environment}
         query={MainQuery}
         variables={{}}
-        render={({ error, props }: { error: Error; props: MainQueryResponse }) => {
+        render={({ error, props }: MainCreated) => {
           if (error) {
-            return <div style={{ color: 'red' }}>ERROR: {error.message}</div>;
+            return (
+              <div style={{ color: 'red' }}>
+                <div>ERROR: {error.message}.</div>
+                {error.stack && <pre>{error.stack}</pre>}
+              </div>
+            );
           }
 
           if (!props) {
