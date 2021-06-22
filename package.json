@@ -87,7 +87,7 @@
     "webpack": "4.42.1",
     "webpack-bundle-analyzer": "3.6.1",
     "webpack-command": "0.5.0",
-    "webpack-dev-server": "3.10.3"
+    "webpack-dev-server": "3.11.0"
   },
   "optionalDependencies": {},
   "engines": {
