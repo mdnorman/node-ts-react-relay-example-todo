@@ -65,7 +65,7 @@
     "html-webpack-plugin": "4.0.3",
     "jest": "25.1.0",
     "prettier": "1.19.1",
-    "pretty-quick": "2.0.1",
+    "pretty-quick": "2.0.2",
     "relay-compiler": "9.0.0",
     "relay-compiler-language-typescript": "12.0.0",
     "relay-compiler-webpack-plugin": "8.0.2",
