@@ -41,7 +41,7 @@
     "react-dom": "16.13.1",
     "react-relay": "9.0.0",
     "react-router-dom": "5.1.2",
-    "regenerator-runtime": "0.13.5",
+    "regenerator-runtime": "0.13.7",
     "relay-runtime": "9.0.0"
   },
   "devDependencies": {
