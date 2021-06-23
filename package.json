@@ -59,7 +59,7 @@
     "awesome-typescript-loader": "5.2.1",
     "babel-loader": "8.2.2",
     "babel-plugin-relay": "9.0.0",
-    "css-loader": "3.4.2",
+    "css-loader": "3.6.0",
     "get-graphql-schema": "2.1.2",
     "graphql-compiler": "2.0.0-rc.1",
     "html-webpack-plugin": "4.0.3",
