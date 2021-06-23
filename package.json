@@ -63,7 +63,7 @@
     "get-graphql-schema": "2.1.2",
     "graphql-compiler": "2.0.0-rc.1",
     "html-webpack-plugin": "4.0.3",
-    "jest": "25.1.0",
+    "jest": "26.0.0",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.2",
     "relay-compiler": "9.0.0",
