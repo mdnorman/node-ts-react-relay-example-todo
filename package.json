@@ -71,7 +71,7 @@
     "relay-compiler-webpack-plugin": "8.0.2",
     "resolve-url-loader": "3.1.4",
     "sass-loader": "8.0.2",
-    "serverless": "2.0.0",
+    "serverless": "2.72.3",
     "serverless-finch": "2.5.2",
     "source-map-loader": "0.2.4",
     "style-loader": "1.1.3",
